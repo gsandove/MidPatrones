@@ -1,0 +1,37 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Courses</h1>
+<table>
+        <thead>
+		<tr>
+			<th>
+			Titulo
+			</th>
+	
+			<th>
+			Duracion en Horas
+			</th>
+	
+			<th>
+			Precio
+			</th>
+		
+			<th>
+			Descripcion
+			</th>
+		
+			<th>
+			Ver
+			</th>
+		</tr>
+	</thead>
+	<tbody>	
+		<div id="courses">
+		  <% @courses.each do |course| %>
+		    <%= render course %>
+		  <% end %>
+		</div>
+	<tbody>
+</table>
+
+<%= link_to "New course", new_course_path %>
